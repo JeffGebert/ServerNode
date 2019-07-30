@@ -1,9 +1,10 @@
-const db_units = require('../models/units')
+const db_atc = require('../models/long_term_wind')
 const axios = require('axios');
 
 
 module.exports = () => {
-	const url='http://localhost:5000/test';
+	const url='http://localhost:5000/long_term_wind';
+
 
 	setInterval(() => {
 
@@ -12,12 +13,12 @@ module.exports = () => {
 			const data_Array = Object.values(data.data)
 			console.log(data_Array.length)
 
-			db_units.insertMany(data_Array)
+			db_long_term_wind.insertMany(data_Array)
 				.then(function (docs){
-					console.log('Units Successfully pushed to DB');
+					console.log('long term wind Successfully pushed to DB');
 				})
 				.catch(function (err){
-					console.log('error Units not pushed to DB', error);
+					console.log('long term wind Successfully pushed to DB', err);
 				})
 		})
 	},60000

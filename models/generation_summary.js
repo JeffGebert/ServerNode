@@ -1,9 +1,9 @@
 const db = require('../db')
 const mongoose = require('mongoose')
 
-const db_units = db.model('units',{
+const db_generation_summary = db.model('generation_summary',{
 
-	ASSET: {
+	GROUP: {
 		type:String,
 	},
 	MC: {
@@ -15,9 +15,6 @@ const db_units = db.model('units',{
 	DCR: {
 		type:Number,
 	},
-	Generation_Type: {
-		type:String,
-	},
 	timestamp:{
 		type:Date,
 		default:Date.now
@@ -26,4 +23,4 @@ const db_units = db.model('units',{
 })
 
 
-module.exports = db_units
+module.exports = db_generation_summary

@@ -1,9 +1,9 @@
-const db_units = require('../models/units')
+const db_interchange = require('../models/interchange')
 const axios = require('axios');
 
 
 module.exports = () => {
-	const url='http://localhost:5000/test';
+	const url='http://localhost:5000/interchange';
 
 	setInterval(() => {
 
@@ -12,12 +12,12 @@ module.exports = () => {
 			const data_Array = Object.values(data.data)
 			console.log(data_Array.length)
 
-			db_units.insertMany(data_Array)
+			db_interchange.insertMany(data_Array)
 				.then(function (docs){
-					console.log('Units Successfully pushed to DB');
+					console.log('Interchange Successfully pushed to DB');
 				})
 				.catch(function (err){
-					console.log('error Units not pushed to DB', error);
+					console.log('Interchange not pushed to DB', error);
 				})
 		})
 	},60000
