@@ -1,9 +1,9 @@
-const db_atc = require('../models/short_term_wind')
+const db_short_term_wind = require('../models/short_term_wind')
 const axios = require('axios');
 
 
 module.exports = () => {
-	const url='http://localhost:5000/short_term_wind';
+	const url='http://localhost:5000/shorttermwind';
 
 
 	setInterval(() => {

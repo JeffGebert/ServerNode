@@ -1,9 +1,9 @@
-const db_atc = require('../models/long_term_wind')
+const db_long_term_wind = require('../models/long_term_wind')
 const axios = require('axios');
 
 
 module.exports = () => {
-	const url='http://localhost:5000/long_term_wind';
+	const url='http://localhost:5000/longtermwind';
 
 
 	setInterval(() => {

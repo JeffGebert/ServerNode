@@ -7,7 +7,7 @@ const db_long_term_wind = db.model('long_term_wind',{
 		type:String,
 	},
 
-	most_likely:{
+	value:{
 		type:Number,
 	},
 
