@@ -29,7 +29,7 @@ require('./Controllers_python/get_short_term_wind')()
 require('./Controllers_python/get_forecast_vs_actual')()
 
 
-
+app.get('/api/units',require('./Controllers_node/get_units'))
 app.get('/api/STWF', require('./Controllers_node/get_short_term_wind'))
 
 
