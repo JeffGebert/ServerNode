@@ -10,7 +10,7 @@ module.exports = () => {
 		axios.get(url).then(data => {
 
 			const data_Array = Object.values(data.data)
-
+			console.log(data_Array)
 			db_forecast_vs_actual.insertMany(data_Array)
 				.then(function (docs){
 					console.log('forecast_vs_actual Successfully pushed to DB');
