@@ -4,7 +4,8 @@ const _ = require('lodash')
 module.exports = (req, res) => {
 	let q = {}
 
-	db_units.find(q).sort('-date').then((data) => {
+	db_units.find(q).sort({'timestamp': -1}).limit(113).then((data) => {
+
 
 		let grouped = _.groupBy(data, 'Generation_Type')
 

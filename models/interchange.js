@@ -6,7 +6,7 @@ const db_interchange = db.model('interchange',{
 	PATH: {
 		type:String,
 	},
-	Actual_Flow: {
+	ACTUAL_FLOW: {
 		type:Number,
 	},
 	timestamp:{
