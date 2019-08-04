@@ -3,7 +3,7 @@ const axios = require('axios');
 
 
 module.exports = () => {
-	const url='http://localhost:5000/interchange';
+	const url=`${process.env.PYTHON_URL}interchange`;
 
 	setInterval(() => {
 

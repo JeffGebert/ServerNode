@@ -3,7 +3,7 @@ const axios = require('axios');
 
 
 module.exports = () => {
-	const url='http://localhost:5000/forecastvsactual';
+	const url=`${process.env.PYTHON_URL}forecastvsactual`;
 
 	setInterval(() => {
 
