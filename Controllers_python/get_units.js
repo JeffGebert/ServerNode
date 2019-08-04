@@ -10,7 +10,6 @@ module.exports = () => {
 		axios.get(url).then(data => {
 
 			const data_Array = Object.values(data.data)
-			console.log(data_Array.length)
 
 			db_units.insertMany(data_Array)
 				.then(function (docs){

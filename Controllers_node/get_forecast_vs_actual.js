@@ -1,26 +1,14 @@
 const db_forecast_vs_actual = require('../models/forecast_vs_actual')
 
 module.exports = (req, res) => {
+	q={}
 
-
-	db_forecast_vs_actual.aggregate(
-		[
-			{$sort: {date:1,actual_price:1,day_ahead_load_forecast:1,real_time_forecast:1,actual_ail:1,timestamp:1}},
-			{
-				$group:
-				{
-					_id: "$date",
-					actual_price : { $last: '$actual_price' },
-					actual_ail:{$last:'$actual_ail'},
-					timestamp: { $last: '$date' },
-					real_time_forecast:{$last: '$real_time_forecast'},
-					day_ahead_load_forecast: {$last: '$day_ahead_load_forecast'}
-
-				}
-			}
-		]
-	).sort({'timestamp': -1}).then((data) => {
-		res.send(data.reverse())
+	db_forecast_vs_actual.find(q).sort({_id:-1}).limit(30).then((data) => {
+		console.log(data)
+		data=data.reverse()
+		data=data.slice(0,24)
+		console.log(data)
+		res.send(data)
 
 	}).catch((err) => {
 		res.send(err)

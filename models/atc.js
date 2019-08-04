@@ -7,7 +7,7 @@ const db_atc = db.model('atc',{
 		type:String,
 	},
 	he: {
-		type:String,
+		type:Number,
 	},
 	Offers_BC_IMPORT: {
 		type:Number,
