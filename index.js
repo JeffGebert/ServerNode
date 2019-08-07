@@ -37,6 +37,8 @@ app.get('/api/generation', require('./Controllers_node/get_generation'))
 app.get('/api/interchange', require('./Controllers_node/get_interchange'))
 app.get('/api/forecast_vs_actual', require('./Controllers_node/get_forecast_vs_actual'))
 app.get('/api/get_atc', require('./Controllers_node/get_atc'))
+app.get('/api/get_specific_unit',require('./Controllers_node/get_specific_unit'))
+app.get('/api/get_specific_unit_update',require('./Controllers_node/get_specific_unit_update'))
 
 app.listen(process.env.PORT, () => {
 	console.log(`Server listening on port ${process.env.PORT}`);

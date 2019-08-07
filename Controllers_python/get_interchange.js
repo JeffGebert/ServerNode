@@ -3,7 +3,7 @@ const axios = require('axios');
 
 
 module.exports = () => {
-	const url=`${process.env.PYTHON_URL}interchange`;
+	const url=`http://https://eea49a70.ngrok.io/interchange`;
 
 	setInterval(() => {
 

@@ -3,7 +3,7 @@ const axios = require('axios');
 
 
 module.exports = () => {
-	const url=`${process.env.PYTHON_URL}atc`;
+	const url=`http://localhost:5000/atc`;
 	console.log("test",url)
 
 	setInterval(() => {
