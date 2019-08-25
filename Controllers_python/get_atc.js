@@ -3,7 +3,7 @@ const axios = require('axios');
 
 
 module.exports = () => {
-	const url=`http://localhost:5000/atc`;
+	const url=`https://2f025c58.ngrok.io/atc`;
 	console.log("test",url)
 
 	setInterval(() => {
