@@ -31,7 +31,7 @@ module.exports = (req, res) => {
   	})
 		}
 
-
+		array.sort()
 
 		res.send(array)
 
