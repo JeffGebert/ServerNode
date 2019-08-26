@@ -32,6 +32,7 @@ module.exports = (req, res) => {
 		}
 
 		array.sort()
+		console.log("array sort", array)
 
 		res.send(array)
 
