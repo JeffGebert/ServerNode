@@ -30,7 +30,7 @@ module.exports = (req, res) => {
     	data: b
   	})
 		}
-
+		array.reverse()
 
 		res.send(array)
 
