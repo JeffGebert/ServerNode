@@ -4,7 +4,7 @@ const _ = require('lodash')
 module.exports = (req, res) => {
 	let q = {}
 
-	db_units.find(q).sort({'timestamp': -1 }).limit(113).then((data) => {
+	db_units.find(q).sort({'timestamp': -1 }).limit(125).then((data) => {
 
 
 		let grouped = _.groupBy(data, 'Generation_Type')
@@ -31,8 +31,6 @@ module.exports = (req, res) => {
   	})
 		}
 
-		array.sort()
-		console.log("array sort", array)
 
 		res.send(array)
 
