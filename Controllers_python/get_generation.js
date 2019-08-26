@@ -3,7 +3,7 @@ const axios = require('axios');
 
 
 module.exports = () => {
-	const url=`https://d3ab59cf.ngrok.io/generation_summary`;
+	const url=`https://3becfd2c.ngrok.io/generation_summary`;
 
 	setInterval(() => {
 

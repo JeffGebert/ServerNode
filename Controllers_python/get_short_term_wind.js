@@ -3,7 +3,7 @@ const axios = require('axios');
 
 
 module.exports = () => {
-	const url=`https://d3ab59cf.ngrok.io/shorttermwind`;
+	const url=`https://3becfd2c.ngrok.io/shorttermwind`;
 
 
 	setInterval(() => {
