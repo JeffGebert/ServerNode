@@ -16,7 +16,7 @@ module.exports = (req, res) => {
   	b = b.map(x => {
     	x.data = _.uniqBy(x.data, 'ASSET')
     	return {
-					ASSET: x.ASSET.trim(),
+					ASSET: x.ASSET,
       		MC: x.MC,
       		TNG: x.TNG,
 					DCR:x.DCR,
