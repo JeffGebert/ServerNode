@@ -11,7 +11,6 @@ module.exports = (req, res) => {
 	db_units.find(q).sort({'timestamp': -1}).limit(1440).then((data) => {
 
 
-
 		res.send(data)
 
 	}).catch((err) => {
