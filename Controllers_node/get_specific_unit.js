@@ -8,7 +8,7 @@ module.exports = (req, res) => {
 	}
 
 	console.log("test",q)
-	db_units.find(q).limit(1440).sort({'timestamp': -1}).then((data) => {
+	db_units.find(q).limit(1440).sort({'_id': -1}).then((data) => {
 
 
 		res.send(data)
