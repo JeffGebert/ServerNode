@@ -5,7 +5,7 @@ module.exports = (req, res) => {
 	let q = {}
 
 	db_units.find(q).sort({'_id': -1 }).limit(125).then((data) => {
-
+		data=data.reverse()
 
 		let grouped = _.groupBy(data, 'Generation_Type')
 
@@ -30,7 +30,6 @@ module.exports = (req, res) => {
     	data: b
   	})
 		}
-		array.reverse()
 
 		res.send(array)
 
