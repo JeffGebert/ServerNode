@@ -6,15 +6,25 @@ const cors = require('cors')
 const app = express()
 const bodyParser = require('body-parser')
 
+const PORT = process.env.PORT || 8080;
 
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
 
+const { Pool } = require('pg');
+const dbParams = require('./db');
+const db = new Pool(dbParams);
+db.connect();
 
-require('./db')
-
+db.connect((err) => {
+	if (err) {
+		console.log('Error connecting to PostgreSQL database')
+	} else {
+		console.log('Connected to PostgreSQL database')
+	}
+})
 
 
 //app.post('/api/unit', require('./controllers/post_units'))
@@ -40,6 +50,6 @@ app.get('/api/get_atc', require('./Controllers_node/get_atc'))
 app.get('/api/get_specific_unit',require('./Controllers_node/get_specific_unit'))
 app.get('/api/get_specific_unit_update',require('./Controllers_node/get_specific_unit_update'))
 
-app.listen(process.env.PORT, () => {
-	console.log(`Server listening on port ${process.env.PORT}`);
-})
+app.listen(PORT, () => {
+	console.log(`Example app listening on port ${PORT}`);
+  });
